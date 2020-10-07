@@ -1,11 +1,33 @@
-## My Project
+## aws-transit-gateway-and-scalable-security-solutions
 
-TODO: Fill this README out!
+The repository consists of all the templates that are required and detailed instructions on securing ingress using scalable security solutions (eg: Palo Alto) and transit gateway.  
 
-Be sure to:
+## STEP 1: Set up Firewall Template
 
-* Change the title in this README
-* Edit your repository description on GitHub
+•	Create a S3 bucket with root folder structure as below.
+
+•	Modify the init-cfg.txt file with vm-auth-key and panorama-server information.
+
+•	Upload the init-cfg.txt file to the /config folder on the S3 bucket.
+
+•	Upload the AWS Lambda code Firewall template (panw-aws.zip) and Application template (ilb.zip) to the S3 bucket’s root folder as shown in above screenshot.
+
+•	Firewall Template:
+
+   o	Launch the stack using (firewall-new-vpc-v2.1.template) template in the AWS CloudFormation console in the AWS account where you launch firewalls.
+   
+   o	Ensure that you select at least two availability zones.
+   
+   o	Enter the VM-Series-Firewall AMI ID. You need to subscribe to the produce (PAYG/BYOL). For this demonstration we are using ‘ami-056149984080d92af’ 
+      in us-west-2 region.
+      
+   o	Select the existing Key pair for the VMs from the drop down menu.
+   
+   o	Enter the CIDR to allow SSH into VMs. In this case it is 0.0.0.0/0.
+   
+   o	Choose “Yes” for Enable debug log.
+
+
 
 ## Security
 
