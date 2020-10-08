@@ -22,7 +22,9 @@ The repository consists of all the templates that are required and detailed inst
       * Select the existing Key pair for the VMs from the drop down menu.
       * Enter the CIDR to allow SSH into VMs. In this case it is 0.0.0.0/0
       * Choose “**Yes**” for **Enable debug log**.
+
       ![picture1](/images/picture1.png)
+      
       * Specify the name of the S3 bucket created earlier for bootstrapping firewall.
       * Specify the S3 bucket containing panw-aws.zip file.
       * The API-Key for firewall is configured with a default username and password. The “pandemo/demopassword” can be changed from Panorama.
