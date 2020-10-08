@@ -1,0 +1,42 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Creates a Transit Gateway attachment with a specified VPC 
+
+Parameters:
+  VpcId:
+    Type: String
+    Description: Provide the Id of VPC where you want to create TGW attachments in
+  TgwSubnetId:
+    Type: 'List<AWS::EC2::Subnet::Id>' 
+    Description: Provide the list of Id of subnets where you want to create TGW attachments in
+  TgwId:
+    Type: String
+    Description: Provide the Id of Transit gateway
+  SubnetRoutingtableId:
+    Type: String
+    Description: Provide the Route table ID associated to subnets that require to be connected via Transit gateway
+  Destinationcidrblock:
+    Type: String
+    Description: Provide the CIDR blocks that require to be connected via Tranist gateway. The value is either CIDR of DMZ VPC or a summarized CIDR of spoke VPCs where the template is launched
+
+Resources: 
+  TgwAttachmentId:
+    Type: AWS::EC2::TransitGatewayAttachment
+    Properties: 
+      SubnetIds: !Ref TgwSubnetId
+      TransitGatewayId: !Ref TgwId
+      VpcId: !Ref VpcId
+
+  TgwRoute:
+    Type: AWS::EC2::Route
+    DependsOn: TgwAttachmentId
+    Properties:
+       RouteTableId: !Ref SubnetRoutingtableId
+       DestinationCidrBlock: !Ref Destinationcidrblock
+       TransitGatewayId: !Ref TgwId 
+
+
+Outputs:
+  TgwAttachmentId: 
+    Description: 'TgwAttachment Id'
+    Value: !Ref TgwAttachmentId
+
