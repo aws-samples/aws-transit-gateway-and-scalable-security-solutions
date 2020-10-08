@@ -23,7 +23,7 @@ The repository consists of all the templates that are required and detailed inst
       * Enter the CIDR to allow SSH into VMs. In this case it is 0.0.0.0/0
       * Choose “**Yes**” for **Enable debug log**.
 
-      ![picture1](/images/Picture1.png)
+      ![picture1](/images/picture1.png)
       
       * Specify the name of the S3 bucket created earlier for bootstrapping firewall.
       * Specify the S3 bucket containing panw-aws.zip file.
