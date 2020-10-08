@@ -16,14 +16,14 @@ The repository consists of all the templates that are required and detailed inst
 *	Upload the AWS Lambda code Firewall template ([panw-aws.zip](https://github.com/PaloAltoNetworks/aws-elb-autoscaling/blob/master/Version-2.1/firewall/panw-aws.zip)) and Application template ([ilb.zip](https://github.com/PaloAltoNetworks/aws-elb-autoscaling/blob/master/Version-2.1/apps/ilb.zip)) to the S3 bucket’s root folder as shown in above screenshot.
 
 *	Firewall Template:
-      * Launch the stack using (firewall-new-vpc-v2.1.template) template in the AWS CloudFormation console in the AWS account where you launch firewalls.
+      * Launch the stack using ([firewall-new-vpc-v2.1.template](https://github.com/PaloAltoNetworks/aws-elb-autoscaling/blob/master/Version-2.1/firewall/firewall-new-vpc-v2.1.template)) template in the [AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/GettingStarted.Walkthrough.html) console in the AWS account where you launch firewalls.
       * Ensure that you select at least two availability zones.
-      * Enter the VM-Series-Firewall AMI ID. You need to subscribe to the produce (PAYG/BYOL). For this demonstration we are using ‘ami-056149984080d92af’ in us-west-2 region.
+      * Enter the VM-Series-Firewall [AMI ID](https://docs.paloaltonetworks.com/vm-series/9-0/vm-series-deployment/set-up-the-vm-series-firewall-on-aws/deploy-the-vm-series-firewall-on-aws/obtain-the-ami/get-amazon-machine-image-ids.html). You need to subscribe to the produce (PAYG/BYOL). For this demonstration we are using ‘ami-056149984080d92af’ in us-west-2 region.
       * Select the existing Key pair for the VMs from the drop down menu.
       * Enter the CIDR to allow SSH into VMs. In this case it is 0.0.0.0/0
       * Choose “**Yes**” for **Enable debug log**.
 
-      ![picture1](/images/picture1.png)
+      ![picture1](/images/Picture1.png)
       
       * Specify the name of the S3 bucket created earlier for bootstrapping firewall.
       * Specify the S3 bucket containing panw-aws.zip file.
