@@ -101,6 +101,8 @@ _Note: Launching the above stack will create a custom resource and a lambda func
 
 ![picture4](/images/picture4.png)
 
+![picture4_v2](/images/picture4_v2.png)
+
   
 ## STEP 5: Update the Listener Rules
 * Create a stack using ALBRule.yaml in AWS Cloudformation console in the DMZ account VPC.
