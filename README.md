@@ -23,7 +23,7 @@ The repository consists of all the templates that are required and detailed inst
       * Enter the CIDR to allow SSH into VMs. In this case it is 0.0.0.0/0
       * Choose “**Yes**” for **Enable debug log**.
 
-      ![picture1](/images/picture1_v2.png)
+      ![picture1](/images/picture1.png)
       
       * Specify the name of the S3 bucket created earlier for bootstrapping firewall.
       * Specify the S3 bucket containing panw-aws.zip file.
@@ -88,9 +88,9 @@ _Note: Launching the above stack will create a custom resource and a lambda func
 * Select the key value pair from the list.
 * Enter the CIDR to allow SSH into VMs. In this case it is 0.0.0.0/0
 
-![picture2](/images/picture2_v2.png)
+![picture2](/images/picture2.png)
 
-![picture3](/images/picture3_v2.png)
+![picture3](/images/picture3.png)
 
 * Under the VPC Connectivity section, enter the total number of AZs for the DMZ VPC.
 * Enter the trust subnet CIDRs from DMZ VPC.
@@ -99,7 +99,7 @@ _Note: Launching the above stack will create a custom resource and a lambda func
   * Enter the Cross-Account Role ARN.
   * Enter the AWS Account ID for DMZ VPC.
 
-![picture4_v2](/images/picture4_v2.png)
+![picture4_v2](/images/picture4.png)
 
   
 ## STEP 5: Update the Listener Rules
