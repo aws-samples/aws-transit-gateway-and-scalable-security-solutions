@@ -118,10 +118,6 @@ _Note: Launching the above stack will create a custom resource and a lambda func
 * Modify the Health check path if required. Default is ‘/’.
 
 
-References for autoscaling solution for other vendors :
-* For information regarding Fortinet device visit [here](https://aws.amazon.com/quickstart/architecture/fortinet-fortigate/)
-* For information regarding Cisco device visit [here](https://github.com/CiscoDevNet/cisco-ftdv/tree/master/autoscale/aws/NGFWv6.6.0)
-
 ## Security
 
 See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
