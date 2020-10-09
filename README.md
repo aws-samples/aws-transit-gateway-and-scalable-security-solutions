@@ -16,7 +16,7 @@ The repository consists of all the templates that are required and detailed inst
 *	Upload the AWS Lambda code Firewall template ([panw-aws.zip](https://github.com/PaloAltoNetworks/aws-elb-autoscaling/blob/master/Version-2.1/firewall)) and Application template ([ilb.zip](https://github.com/PaloAltoNetworks/aws-elb-autoscaling/blob/master/Version-2.1/apps/ilb.zip)) to the S3 bucket’s root folder as shown in above screenshot.
 
 *	Firewall Template:
-      * Launch the stack using ([firewall-template](https://github.com/PaloAltoNetworks/aws-elb-autoscaling/blob/master/Version-2.1/firewall/firewall-new-vpc-v2.1.template)) template in the [AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/GettingStarted.Walkthrough.html) console in the AWS account where you launch firewalls.
+      * Launch the stack using ([firewall-template](https://github.com/PaloAltoNetworks/aws-elb-autoscaling/blob/master/Version-2.1/firewall/firewall-new-vpc-v2.1.template)) template in the [AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/GettingStarted.Walkthrough.html) console in the AWS account where you launch firewalls. The local copy of the template is also provided in this repository.
       * Ensure that you select at least two availability zones.
       * Enter the VM-Series-Firewall [AMI ID](https://docs.paloaltonetworks.com/vm-series/9-0/vm-series-deployment/set-up-the-vm-series-firewall-on-aws/deploy-the-vm-series-firewall-on-aws/obtain-the-ami/get-amazon-machine-image-ids.html). You need to subscribe to the produce (PAYG/BYOL). For this demonstration we are using ‘ami-056149984080d92af’ in us-west-2 region.
       * Select the existing Key pair for the VMs from the drop down menu.
