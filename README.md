@@ -1,4 +1,4 @@
-The repository consists of all the templates that are required and detailed instructions on securing ingress using scalable security solutions (eg: Palo Alto) and transit gateway.  
+The repository consists of all the templates that are required and detailed instructions on securing ingress VPC traffic using scalable security solutions (eg: Palo Alto) and AWS Transit Gateway.  
 
 ## STEP 1: Set up Firewall Template
 
