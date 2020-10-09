@@ -37,7 +37,7 @@ The repository consists of all the templates that are required and detailed inst
          * Network load balancer SQS queue name
          * Elastic load balancer DNS name
 
-## STEP 2: Set up TGW:
+## STEP 2: Set up Transit Gateway:
 * Create a stack using transit-gateway.yaml in AWS Cloudformation console in firewall Account.
 * Enter the transit gateway name.
 * Enter the Organization ID that enables sharing of the Transit gateway with the spoke accounts.
