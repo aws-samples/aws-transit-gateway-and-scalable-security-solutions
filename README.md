@@ -38,7 +38,7 @@ The repository consists of all the templates that are required and detailed inst
          * Elastic load balancer DNS name
 
 ## STEP 2: Set up Transit Gateway:
-* Create a stack using transit-gateway.yaml in AWS Cloudformation console in firewall Account.
+* Create a stack using ([transit-gateway](https://github.com/aws-samples/aws-transit-gateway-and-scalable-security-solutions/blob/main/transit-gateway.yaml)) in AWS Cloudformation console in firewall Account.
 * Enter the transit gateway name.
 * Enter the Organization ID that enables sharing of the Transit gateway with the spoke accounts.
 
@@ -47,7 +47,7 @@ _Note: The above template creates transit gateway with two routing domains - DMZ
 
 ## STEP 3: Enable connectivity between spoke account/VPCs and DMZ VPC
 a. In DMZ VPC
-* Create a stack using transit-gateway-attachment.yaml in AWS Cloudformation console in the firewall account VPC.
+* Create a stack using ([transit-gateway-attachment](https://github.com/aws-samples/aws-transit-gateway-and-scalable-security-solutions/blob/main/transit-gateway-attachment.yaml)) in AWS Cloudformation console in the firewall account VPC.
 * Provide the transit gateway ID created in step 2.
 * Provide the trusted subnets of your DMZ VPC.
 * Provide the Routing table ID associated to the trusted subnets.
@@ -57,7 +57,7 @@ a. In DMZ VPC
 _Note: Routing tables of trusted subnets need to be updated with Spoke VPC CIDR as destination and Transit gateway as target_
 
 b. In Spoke VPC
-* Create a stack again using transit-gateway-attachment.yaml in AWS Cloudformation console in Spoke account/VPC.
+* Create a stack again using ([transit-gateway-attachment](https://github.com/aws-samples/aws-transit-gateway-and-scalable-security-solutions/blob/main/transit-gateway-attachment.yaml))in AWS Cloudformation console in Spoke account/VPC.
 * Provide the Transit gateway ID created in step 2.
 * Provide the internal subnets of your spoke VPC.
 * Provide the DMZ VPC CIDR to which the spoke VPC need to connect to. This is to enable routing between a spoke VPC and DMZ VPC.
@@ -66,7 +66,7 @@ b. In Spoke VPC
 * Repeat the above steps in all Spoke VPCs
 
 c. In DMZ account/VPC
-* Create another stack using transit-gateway-propagations.yaml in AWS Cloudformation console in DMZ account/VPC.
+* Create another stack using ([transit-gateway-propagations](https://github.com/aws-samples/aws-transit-gateway-and-scalable-security-solutions/blob/main/transit-gateway-propagations.yaml)) in AWS Cloudformation console in DMZ account/VPC.
 * Provide the ID for the DMZ VPC.
 * Provide the IDs for the Spoke VPCs.
 * Provide the names for your Spoke VPCs in the same order as IDs for VPCs.
@@ -76,7 +76,7 @@ c. In DMZ account/VPC
 _Note: Launching the above stack will create a custom resource and a lambda function which requires to be updated each time a new spoke is connected to the transit gateway._
 
 ## STEP 4: Set up Application Template:
-* Launch the stack using application-template.yaml template in the [AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/GettingStarted.Walkthrough.html) console in the spoke VPC account.
+* Launch the stack using ([application-template](https://github.com/aws-samples/aws-transit-gateway-and-scalable-security-solutions/blob/main/application-template.yaml)) template in the [AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/GettingStarted.Walkthrough.html) console in the spoke VPC account.
 * Provide the template name. Here we are using Application-Template
 * Select the existing Application Spoke VPC from the drop-down list for the VPCID.
 * Select the number of availability zones and AZ from the list.
@@ -103,7 +103,7 @@ _Note: Launching the above stack will create a custom resource and a lambda func
 
   
 ## STEP 5: Update the Listener Rules
-* Create a stack using alb-rules.yaml in AWS Cloudformation console in the DMZ account VPC.
+* Create a stack using ([alb-rules](https://github.com/aws-samples/aws-transit-gateway-and-scalable-security-solutions/blob/main/alb-rules.yaml)) in AWS Cloudformation console in the DMZ account VPC.
 * Enter the DMZ VPC ID.
 * Enter the DNS name for the application.
 * Enter the Public LoadBanlancer Listener ARN which was launched with the Firewall template.
