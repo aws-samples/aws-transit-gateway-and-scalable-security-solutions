@@ -118,8 +118,9 @@ _Note: Launching the above stack will create a custom resource and a lambda func
 * Modify the Health check path if required. Default is ‘/’.
 
 ## Contacts
-Shiva Vaidyanathan - Senior Cloud Infrastructure Architect, AWS Professional Services
-Mayuresh Joshi - Cloud Infrastructure Architect, AWS Professional Services
+* Shiva Vaidyanathan - Senior Cloud Infrastructure Architect, AWS Professional Services
+
+* Mayuresh Joshi - Cloud Infrastructure Architect, AWS Professional Services
 
 
 ## Security
