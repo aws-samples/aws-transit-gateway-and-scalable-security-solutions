@@ -1,4 +1,4 @@
-The repository consists of all the templates that are required and detailed instructions on securing ingress VPC traffic using scalable security solutions (eg: Palo Alto) and AWS Transit Gateway.  
+The repository consists of the templates that are required and detailed instructions on securing ingress VPC traffic using scalable security solutions (eg: Palo Alto) and AWS Transit Gateway.  
 
 ## STEP 1: Set up Firewall Template
 
@@ -116,6 +116,10 @@ _Note: Launching the above stack will create a custom resource and a lambda func
 * Click ‘Update’.
 * This should add the existing VM instances behind this target group.
 * Modify the Health check path if required. Default is ‘/’.
+
+## Contacts
+Shiva Vaidyanathan - Senior Cloud Infrastructure Architect, AWS Professional Services
+Mayuresh Joshi - Cloud Infrastructure Architect, AWS Professional Services
 
 
 ## Security
